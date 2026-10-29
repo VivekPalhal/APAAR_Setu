@@ -102,8 +102,9 @@ Rather than black-box decisions, APAAR Setu combines:
 ### 1. Running the Interactive Frontend Prototype
 
 ```bash
-# Navigate to the frontend directory
-cd apaar-setu
+# Clone the repository
+git clone https://github.com/VivekPalhal/APAAR_Setu.git
+cd APAAR_Setu
 
 # Install dependencies
 pnpm install
@@ -147,28 +148,30 @@ Interactive OpenAPI Swagger documentation will be available at **[http://localho
 
 ```
 APAAR_Setu/
-├── apaar-setu/                  # Next.js 16 Interactive Web Application
-│   ├── app/                     # App Router pages (16+ full route views)
-│   │   ├── activity/            # Student access log
-│   │   ├── alerts/              # Regulator anomaly alerts & resolution
-│   │   ├── ask/                 # Natural language query assistant
-│   │   ├── audit/               # Immutable hash-chained audit ledger
-│   │   ├── corrections/         # Student record correction disputes
-│   │   ├── inst/                # Institution administrator portal
-│   │   ├── institutions/        # National institution registry & trust bands
-│   │   ├── my-record/           # Student W3C credential viewer
-│   │   ├── reports/             # Compliance analytics & national stats
-│   │   ├── rules/               # Anomaly threshold & ML rules engine
-│   │   ├── shares/              # DPDP selective disclosure manager
-│   │   ├── students/            # College student database browser
-│   │   ├── upload/              # Multi-step batch upload wizard
-│   │   ├── users/               # Operator accounts & PKI key management
-│   │   ├── verify/[token]/      # Employer offline credential verifier
-│   │   ├── layout.tsx           # Global shell & responsive layout
-│   │   └── page.tsx             # Root regulator dashboard
-│   ├── components/              # Shell, Nav, and role-specific UI components
-│   ├── lib/                     # Mock dataset, state context, utility functions
-│   └── package.json             # NPM dependencies & scripts
+├── app/                         # Next.js App Router (16+ full route views)
+│   ├── activity/                # Student access log
+│   ├── alerts/                  # Regulator anomaly alerts & resolution
+│   ├── ask/                     # Natural language query assistant
+│   ├── audit/                   # Immutable hash-chained audit ledger
+│   ├── corrections/             # Student record correction disputes
+│   ├── inst/                    # Institution administrator portal
+│   ├── institutions/            # National institution registry & trust bands
+│   ├── my-record/               # Student W3C credential viewer
+│   ├── reports/                 # Compliance analytics & national stats
+│   ├── rules/                   # Anomaly threshold & ML rules engine
+│   ├── shares/                  # DPDP selective disclosure manager
+│   ├── students/                # College student database browser
+│   ├── upload/                  # Multi-step batch upload wizard
+│   ├── users/                   # Operator accounts & PKI key management
+│   ├── verify/[token]/          # Employer offline credential verifier
+│   ├── layout.tsx               # Global shell & responsive layout
+│   └── page.tsx                 # Root regulator dashboard
+├── components/                  # Shell, Nav, and role-specific UI components
+├── lib/                         # Mock dataset, state context, utility functions
+├── public/                      # Static assets & icons
+├── package.json                 # Project dependencies & scripts
+├── tsconfig.json                # TypeScript configuration
+├── next.config.ts               # Next.js configuration
 ├── backend/                     # FastAPI Anomaly Detection & Cryptography Engine
 │   ├── app.py                   # FastAPI service with ML & Ed25519 PKI
 │   ├── generator.py             # 1M+ student dataset generator with planted anomalies
